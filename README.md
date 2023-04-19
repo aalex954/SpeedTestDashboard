@@ -22,7 +22,10 @@ The SpeedTest dashboard works out of the box and requires no extra configuration
 
 ```http://localhost:53000/login```
 
-admin/admin
+default credentials: _admin/admin_
+
+_note: Grafana credentials can be set in the ./grafana/env.grafana file_
+
 
 ## SpeedTest.net
 
