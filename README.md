@@ -4,13 +4,25 @@ Network monitoring dashboards for pfSense and SpeedTest.net CLI.
 
 ## Docker Compose
 
-```docker-compose up -d```
-
 Docker compose builds three docker containers using the included configuration files to setup the stack.
 
 The SpeedTest dashboard works out of the box and requires no extra configuration.
 
-```https://localhost:3000```
+## Usage
+
+### Docker Compose
+
+```git clone https://github.com/aalex954/SpeedTestDashboard```
+
+```cd SpeedTestDashboard```
+
+```docker-compose up -d```
+
+### Grafana
+
+```http://localhost:53000/login```
+
+admin/admin
 
 ## SpeedTest.net
 
