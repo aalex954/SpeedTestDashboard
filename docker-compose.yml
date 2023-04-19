@@ -1,0 +1,56 @@
+version: '3.7'
+
+services:
+  influxdb:
+    image: influxdb:latest
+    container_name: influxdb
+    ports:
+      - "58083:8083"
+      - "58086:8086"
+      - "58090:8090"
+    volumes:
+      - ./influxdb/data/:/var/lib/influxdb
+    environment:
+      INFLUXDB_DB: "speedtest"
+
+
+  speedtest:
+    restart: always
+    image: ${DOCKER_REGISTRY-}pleb/speedtest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: speedtest
+    depends_on:
+      - influxdb
+    ports:
+      - "58125:8125"
+      - "58092:8092"
+      - "58094:8094"
+      - "58186:8186"
+    volumes:
+      - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+
+  
+  grafana:
+    restart: always
+    image: grafana/grafana:latest
+    container_name: grafana
+    env_file:
+      - './grafana/env.grafana'
+    depends_on:
+      - influxdb
+    ports:
+      - "53000:3000"
+    volumes:
+      - ./grafana/data/:/var/lib/grafana:rw
+      - ./grafana/provisioning:/etc/grafana/provisioning/:ro
+
+volumes:
+  influxdb-volume:
+  grafana-volume:
+  
+networks: 
+  default: 
+    name: 'speedtest'
+    driver: 'bridge'
