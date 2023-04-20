@@ -9,6 +9,15 @@ providers:
     updateIntervalSeconds: 10 #how often Grafana will scan for changed dashboards
     options:
       path: /etc/grafana/provisioning/dashboards/speedtest_dash.json
+
+  - name: 'speedtest2'
+    orgId: 1
+    folder: Networking
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 10 #how often Grafana will scan for changed dashboards
+    options:
+      path: /etc/grafana/provisioning/dashboards/speedtest2_dash.json
   
   - name: 'pfSense'
     orgId: 1

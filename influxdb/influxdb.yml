@@ -1,4 +1,3 @@
-# config file version
 apiVersion: 1
 
 deleteDatasources:
@@ -9,14 +8,6 @@ datasources:
     type: influxdb
     access: proxy
     database: speedtest
-    user: admin
-    password: password
-    url: http://influxdb:8086
-
-  - name: pfSense
-    type: influxdb
-    access: proxy
-    database: pfSSense
     user: admin
     password: password
     url: http://influxdb:8086

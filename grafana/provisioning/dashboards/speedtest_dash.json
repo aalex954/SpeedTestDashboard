@@ -19,7 +19,7 @@
   "panels": [
     {
       "cacheTimeout": null,
-      "datasource": null,
+      "datasource": "speedtest",
       "description": "Speedtest CLI Data ",
       "fieldConfig": {
         "defaults": {
@@ -176,7 +176,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": null,
+      "datasource": "speedtest",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -269,7 +269,7 @@
               "condition": "AND",
               "key": "domain",
               "operator": "=",
-              "value": "www.stratuscube.com"
+              "value": "google.com"
             }
           ]
         },
@@ -318,19 +318,19 @@
               "condition": "AND",
               "key": "domain",
               "operator": "=",
-              "value": "www.stratuscube.com"
+              "value": "google.com"
             }
           ]
         }
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "DNS Resolution: www.stratuscube.com",
+      "title": "DNS Resolution: google.com",
       "type": "bargauge"
     },
     {
       "cacheTimeout": null,
-      "datasource": null,
+      "datasource": "speedtest",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -427,7 +427,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "speedtest",
       "fieldConfig": {
         "defaults": {
           "custom": {
@@ -669,7 +669,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "speedtest",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -807,7 +807,7 @@
       "bars": true,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "speedtest",
       "description": "Jitter",
       "fieldConfig": {
         "defaults": {
@@ -942,7 +942,7 @@
         "mode": "spectrum"
       },
       "dataFormat": "timeseries",
-      "datasource": null,
+      "datasource": "speedtest",
       "fieldConfig": {
         "defaults": {
           "custom": {
